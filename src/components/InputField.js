@@ -3,10 +3,14 @@ import '../styles/App.css';
 
 //complete the following using forward refs concept 
 
-const InputField=()=>{
+const InputField=({kin,refi})=>{
+  // const{kin}=props
+  const HandleChange=(e)=>{
+     kin(e.target.value)
+  }
     return(
     <div>
-      <input id="input" type="text"  ref={ref}/>
+      <input id="input" type="text"  ref={refi} onChange={HandleChange}/>
     </div>
     )
     }
